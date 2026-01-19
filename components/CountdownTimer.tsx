@@ -39,7 +39,8 @@ const CountdownTimer: React.FC = () => {
   );
 
   return (
-    <div className="flex justify-center items-center my-10 animate-fade-in">
+    /* flex-row-reverse ensures that in a RTL environment, the first element (Days) is positioned at the far left */
+    <div className="flex flex-row-reverse justify-center items-center my-10 animate-fade-in">
       <TimeUnit value={timeLeft.days} label="ימים" />
       <TimeUnit value={timeLeft.hours} label="שעות" />
       <TimeUnit value={timeLeft.minutes} label="דקות" />
